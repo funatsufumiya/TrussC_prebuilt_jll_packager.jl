@@ -12,10 +12,14 @@ function create_tar_gz() {
     mkdir $target/lib
     mkdir $target/include
     cp libs/$name.$ext $target/lib
-    tar czf $target.tar.gz $target
+    cd $target
+    tar czf $target.tar.gz *
+    cd ..
     rm -rf $target
 }
 
+cd `dirname $0`
+rm -rf *.tar.gz
 create_tar_gz "mac_arm64" "dylib"
 create_tar_gz "linux_arm64" "so"
 create_tar_gz "windows_arm64" "dll"
