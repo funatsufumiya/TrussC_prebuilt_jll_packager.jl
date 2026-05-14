@@ -5,7 +5,8 @@ LIB=libJlTrussC
 function create_tar_gz() {
     target=$1
     ext=$2
-    name=${3:="$LIB"}
+    name_arg=$3
+    name=${name_arg:="$LIB"}
     rm -rf $target
     mkdir $target
     mkdir $target/lib
