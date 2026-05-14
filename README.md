@@ -17,3 +17,7 @@ This repository is used to create [TrussC_prebuilt_jll](https://github.com/funat
 # 5. generate Artifacts.toml
 ./gen_artifacts.sh
 ```
+
+## Develop
+
+In order to build libTrussC.dll/so/dylib see https://github.com/funatsufumiya/tcxJuliaCxxWrap
