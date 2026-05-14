@@ -3,7 +3,7 @@
 cd `dirname $0`
 NAME="TrussC_prebuilt_jll"
 VERSION=$(git describe --tags --abbrev=0)
-GIT_SHA1=$(git rev-parse "$VERSION")
+# GIT_SHA1=$(git rev-parse "$VERSION")
 URL=https://github.com/funatsufumiya/TrussC_prebuilt_jll_packager.jl/releases/download/$VERSION
 
 function gen(){
@@ -11,6 +11,14 @@ function gen(){
     ARCH=$2
     FILE=$OS-$ARCH.tar.gz
     SHA256=$(sha256sum $OS-$ARCH.tar.gz | awk '{print $1}')
+
+    rm -rf tmp
+    mkdir tmp
+    cd tmp
+    tar xf ../$FILE
+    GIT_SHA1=$(julia -e 'using Pkg; print(bytes2hex(Pkg.GitTools.tree_hash(pwd())))')
+    cd ..
+    rm -rf tmp
 
     echo "[[$NAME]]"
     echo "git-tree-sha1 = \"$GIT_SHA1\""
