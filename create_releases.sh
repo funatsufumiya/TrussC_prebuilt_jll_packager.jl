@@ -18,7 +18,6 @@ function create_tar_gz() {
     rm -rf $target
 }
 
-cd `dirname $0`
 rm -rf *.tar.gz
 create_tar_gz "mac_arm64" "dylib"
 create_tar_gz "linux_arm64" "so"
