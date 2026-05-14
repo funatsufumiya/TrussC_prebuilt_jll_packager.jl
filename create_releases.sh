@@ -23,5 +23,5 @@ cd `dirname $0`
 echo "working dir: $(pwd)"
 rm -rf *.tar.gz
 create_tar_gz "mac_arm64" "dylib"
-create_tar_gz "linux_arm64" "so"
-create_tar_gz "windows_arm64" "dll"
+create_tar_gz "linux_x86_64" "so"
+create_tar_gz "windows_x86_64" "dll"
