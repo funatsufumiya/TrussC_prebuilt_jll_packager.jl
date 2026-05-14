@@ -10,14 +10,15 @@ function gen(){
     OS=$1
     ARCH=$2
     FILE=$OS-$ARCH.tar.gz
-    SHA1=$(sha256sum $OS-$ARCH.tar.gz | awk '{print $1}')
+    SHA256=$(sha256sum $OS-$ARCH.tar.gz | awk '{print $1}')
 
     echo "[[$NAME]]"
+    echo "git-tree-sha1 = \"$GIT_SHA1\""
     echo "os = \"$OS\""
     echo "arch = \"$ARCH\""
     echo
     echo "    [[$NAME.download]]"
-    echo "    sha256 = \"$SHA1\""
+    echo "    sha256 = \"$SHA256\""
     echo "    url = \"$URL/$FILE\""
     echo ""
 }
