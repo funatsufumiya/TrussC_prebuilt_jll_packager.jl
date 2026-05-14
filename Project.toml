@@ -1,0 +1,4 @@
+name = "TrussC_prebuilt_jll_packager"
+uuid = "121afe26-bb98-4ca4-a2d4-660516b5d69c"
+version = "0.1.0"
+authors = ["Fumiya Funatsu <funatsu.fumiya@gmail.com>"]
