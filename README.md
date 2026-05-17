@@ -4,7 +4,7 @@ This repository is used to create [TrussC_prebuilt_jll](https://github.com/funat
 
 > [!Warning]
 > `git clone https://github.com/funatsufumiya/TrussC_prebuilt_jll_packager.jl --single-branch --branch main` <br>
->   is highly recommended. `main` branch was rebased for cleanup big files, but still big files remain in GitHub server history.
+>   is highly recommended. `main` branch was already rebased for cleanup big files, but still big files remain in GitHub server history.
 
 ## Usage
 
